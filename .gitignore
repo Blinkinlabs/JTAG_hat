@@ -1,0 +1,70 @@
+# General temp files
+*.DS_Store
+*.swp
+*.lck
+*.autosave
+*.user
+*.pyc
+
+# GNU/Make
+*/*.hex
+/*.elf
+*/*.o
+*/*.d
+*/*.i
+*/*.ii
+*/*.s
+*/*.dfu
+
+# C51
+*.INC
+*.OBJ
+*.SRC
+*.SBR
+*.LST
+*.MAP
+*.hex
+*.bin
+!releases/*.bin
+
+# SDCC
+*.rel
+*.rst
+*.sym
+*.mem
+*.lk
+*.ihx
+*.asm
+
+# Qt 
+build-*/
+*.autosave
+
+# Eagle PCB
+*.[bls]#[0-9]
+*.?##
+
+# Altium
+*/History
+*/__Previews
+*/Project\ Logs\ for\ *
+*/Project\ Outputs\ for\ *
+*/debug.log
+*/*.PrjPcbStructure
+
+# ESP32
+#sdkconfig
+sdkconfig.old
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# Project specific
+build/
+components/frontend/
+components/fpga_bin/
+test/fpga_test/build/
+doxygen/html/
+doxygen/log.txt
