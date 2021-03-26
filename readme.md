@@ -40,18 +40,18 @@ touch ssh
 6. Update packages and install git:
 ```
 sudo apt update
-sudo apt upgrade
-sudo apt install git autoconf libtool libusb-1.0-0-dev screen
+sudo apt upgrade -y
+sudo apt install -y git autoconf libtool libusb-1.0-0-dev screen telnet
 ```
 
 7. Download and build our [patched](https://github.com/Blinkinlabs/OpenOCD/commit/de3ccf1de793416172838cf2676b77498c0fd1d7) version of OpenOCD:
 ```
-git clone https://github.com/Blinkinlabs/OpenOCD.git openocd
+git clone https://github.com/Blinkinlabs/OpenOCD.git --branch jtag_hat openocd
 cd openocd
 
 ./bootstrap
 ./configure --enable-sysfsgpio --enable-bcm2835gpio
-make
+make -j6
 sudo make install
 ```
 
@@ -125,8 +125,6 @@ lrwxrwxrwx 1 root root 7 Mar 24 15:10 /dev/serial0 -> ttyAMA0
 
 Once the serial port is configured, it should be ready for use. You can test it using screen:
 ```
-sudo apt-get install screen
-
 screen /dev/serial0 115200
 ```
 
