@@ -88,9 +88,50 @@ echo 0 > /sys/class/gpio/gpio13/value
 ```
 Note: If your target board is already powered, do not enable target power! The red LED on the board will light up when the target power voltage is present.
 
-4. Start an OpenOCD session for an STM32F0 target:
+4. Make an OpenOCD config file for the JTAG_HAT
+
+Put the following into a file named 'jtag_hat.cfg':
 ```
-sudo openocd -f interface/raspberrypi2-native.cfg \
+#
+# Config for using JTAG_hat with Raspberry Pi 2/3/4 (?)
+#
+
+adapter driver bcm2835gpio
+
+bcm2835gpio_peripheral_base 0x3F000000
+
+# Transition delay calculation: SPEED_COEFF/khz - SPEED_OFFSET
+# These depend on system clock, calibrated for stock 700MHz
+# bcm2835gpio_speed SPEED_COEFF SPEED_OFFSET
+bcm2835gpio_speed_coeffs 146203 36
+
+# Each of the JTAG lines need a gpio number set: tck tms tdi tdo
+# Header pin numbers: 23 22 19 21
+bcm2835gpio_jtag_nums 11 25 10 9
+
+# Each of the SWD lines need a gpio number set: swclk swdio
+# Header pin numbers: 23 22
+bcm2835gpio_swd_nums 11 25
+
+# If you define trst or srst, use appropriate reset_config
+# Header pin numbers: TRST - 26, SRST - 18
+
+#bcm2835gpio_trst_num 7
+# reset_config trst_only trst_push_pull
+
+#bcm2835gpio_srst_num 24
+#reset_config srst_only srst_push_pull
+
+# or if you have both connected,
+#reset_config trst_and_srst srst_push_pull trst_push_pull
+
+# Direction pin for SWDIO level shifting buffer
+bcm2835gpio_swdio_dir_num 6
+```
+
+5. Start an OpenOCD session for an STM32F0 target:
+```
+sudo openocd -f jtag_hat.cfg \
              -c "bindto 0.0.0.0; transport select swd" \
              -c "adapter speed 1000" \
              -f target/stm32f0x.cfg
