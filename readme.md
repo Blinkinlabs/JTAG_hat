@@ -10,6 +10,7 @@ Features:
 * Selectable target power, to power your device from the RPi 3.3V suppy
 * Level-shifted UART interface connected to RPi serial port
 * Hardware reset via a pull-down transistor
+* Built-in voltage and current measurement of target device
 
 The JTAG Hat is designed to work with [OpenOCD](http://openocd.org/), and provides a .05" 10-pin [Cortex Debug Connector](https://documentation-service.arm.com/static/5fce6c49e167456a35b36af1), with pins to support debugging devices with either a JTAG (TCK/TMS/TDI/TDO) or SWD (SWDIO/SWDCLK) programming interface. A traditional .1, 20-pin JTAG header is also provided, which can be used with normal jumper wires for more flexibiity.
 
@@ -138,6 +139,49 @@ sudo openocd -f jtag_hat.cfg \
 ```
 
 Now you can connect to the server using GDB, and flash new code, dump things, etc.
+
+## Sensing load current
+
+The hat includes an INA219 current sensor, which can be used to monitor the target power usage if powered through the Pi, and the target voltage if the target is self-powered. To use it:
+
+1. Use 'sudo raspi-config', and under the 'Interfacing Options' menu, enable the I2C interface.
+
+2. Install the [Pi INA219 library](https://github.com/chrisb2/pi_ina219/blob/master/README.md):
+
+    sudo apt install python3-pip
+    pip3 install pi-ina219
+
+3. Create a new file called 'sense_current.py', and copy the following into it:
+
+```
+#!/usr/bin/env python3
+from ina219 import INA219
+from ina219 import DeviceRangeError
+SHUNT_OHMS = 0.1
+def read():
+   ina = INA219(SHUNT_OHMS)
+   ina.configure()
+   print("Bus Voltage: {:.3f} V".format(ina.voltage()))
+   try:
+       print("Bus Current: {:.3f} mA".format(ina.current()))
+       print("Power: {:.3f} mW".format(ina.power()))
+       print("Shunt voltage: {:.3f} mV".format(ina.shunt_voltage()))
+   except DeviceRangeError as e:
+       # Current out of device range with specified shunt resister
+       print(e)
+if __name__ == "__main__":
+   read()
+```
+
+4. Make the script executable, then run it:
+
+    chmod +x sense_current.py
+    ./sense_current.py
+    
+    Bus Voltage: 3.280 V
+    Bus Current: 95.000 mA
+    Power: 311.707 mW
+    Shunt voltage: 9.510 mV
 
 ## UART header
 
