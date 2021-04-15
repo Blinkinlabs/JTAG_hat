@@ -174,14 +174,15 @@ if __name__ == "__main__":
 ```
 
 4. Make the script executable, then run it:
-
-    chmod +x sense_current.py
-    ./sense_current.py
+```
+chmod +x sense_current.py
+./sense_current.py
     
-    Bus Voltage: 3.280 V
-    Bus Current: 95.000 mA
-    Power: 311.707 mW
-    Shunt voltage: 9.510 mV
+Bus Voltage: 3.280 V
+Bus Current: 95.000 mA
+Power: 311.707 mW
+Shunt voltage: 9.510 mV
+```
 
 ## UART header
 
