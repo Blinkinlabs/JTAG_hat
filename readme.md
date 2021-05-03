@@ -184,6 +184,8 @@ Power: 311.707 mW
 Shunt voltage: 9.510 mV
 ```
 
+Note that the current measurement includes the power used by the target voltage indicator LED, as well as the level translation buffers.
+
 ## UART header
 
 ![](documentation/uart_header.png)
@@ -214,9 +216,9 @@ Once the serial port is configured, it should be ready for use. You can test it 
 screen /dev/serial0 115200
 ```
 
-Tip: Make sure to connect the ground wire!
+Tip: Make sure to connect a ground wire between the JTAG Hat and the target board.
 
-Tip: Make sure Vtarget is enabled, otherwise the serial port buffers won't work!
+Tip: Make sure Vtarget is enabled, otherwise the serial port buffers won't work.
 
 ## Hardware design
 
