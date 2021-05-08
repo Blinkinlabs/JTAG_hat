@@ -4,15 +4,15 @@
 
 Convert your Raspberry Pi 2/3/4 into a networked JTAG debugger!
 
-Features:
-* Level-shifted JTAG / SWD programming interface, supports 1.8V to 3.3V targets (TODO: is 5V supported?)
-* Designed to work with OpenOCD, which supports debugging a large number of devices (STM32, etc)
-* Selectable target power, to power your device from the RPi 3.3V suppy
-* Level-shifted UART interface connected to RPi serial port
-* Hardware reset via a pull-down transistor
-* Built-in voltage and current measurement of target device
+The JTAG Hat is designed to work with [OpenOCD](http://openocd.org/), and provides a .05" 10-pin [Cortex Debug Connector](https://documentation-service.arm.com/static/5fce6c49e167456a35b36af1), with pins to support debugging devices with either a JTAG (TCK/TMS/TDI/TDO) or SWD (SWDIO/SWDCLK) programming interface. A traditional .1, 20-pin JTAG header is also provided, which can be used with 0.1" jumper wires for more flexibiity.
 
-The JTAG Hat is designed to work with [OpenOCD](http://openocd.org/), and provides a .05" 10-pin [Cortex Debug Connector](https://documentation-service.arm.com/static/5fce6c49e167456a35b36af1), with pins to support debugging devices with either a JTAG (TCK/TMS/TDI/TDO) or SWD (SWDIO/SWDCLK) programming interface. A traditional .1, 20-pin JTAG header is also provided, which can be used with normal jumper wires for more flexibiity.
+Features:
+*    Level-shifted JTAG / SWD programming interface, supports 1.8V to 5V targets
+*    Designed to work with OpenOCD, which supports debugging a large number of devices (STM32, ESP32, etc)
+*    Selectable target power, to power your device from the RPi 3.3V suppy
+*    Hardware reset (both SRST and TRST) via a pull-down transistor
+*    Level-shifted UART interface connected to RPi serial port
+*    Built-in voltage and current measurement of target device
 
 ## Setup
 
