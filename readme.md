@@ -226,6 +226,8 @@ Tip: Make sure Vtarget is enabled, otherwise the serial port buffers won't work.
 
 ![](documentation/jtag_hat_schematic.png)
 
+This repository contains the Altium [source files](https://github.com/Blinkinlabs/JTAG_hat/tree/main/pcb), as well as the gerbers used for production.
+
 ## License
 
 The board design is licensed under [TODO] and documentation is released under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
