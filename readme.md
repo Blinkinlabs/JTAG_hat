@@ -230,4 +230,4 @@ This repository contains the Altium [source files](https://github.com/Blinkinlab
 
 ## License
 
-The board design is licensed under [TODO] and documentation is released under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+The board design is [Licensed under CERN-OHL-P v2](https://cern.ch/cern-ohl) and documentation is released under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
