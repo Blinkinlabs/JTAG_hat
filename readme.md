@@ -14,7 +14,7 @@ Features:
 *    Level-shifted UART interface connected to RPi serial port
 *    Built-in voltage and current measurement of target device
 
-[Get one here (US)](https://shop.blinkinlabs.com/collections/development-tools/products/jtag-hat) or [here (EU/rest of world)](https://shop-nl.blinkinlabs.com/collections/development-tools/products/jtag-hat)
+[Get one here (US)](https://shop.blinkinlabs.com/collections/development-tools/products/jtag-hat) or [here (EU/rest of world)](https://shop-nl.blinkinlabs.com/collections/development-tools/products/jtag-hat), or make one yourself- all design files are in this repository.
 
 ## Setup
 
