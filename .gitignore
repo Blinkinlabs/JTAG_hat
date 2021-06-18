@@ -5,6 +5,7 @@
 *.autosave
 *.user
 *.pyc
+*.log
 
 # GNU/Make
 */*.hex
@@ -62,9 +63,3 @@ sdkconfig.old
 .settings/
 
 # Project specific
-build/
-components/frontend/
-components/fpga_bin/
-test/fpga_test/build/
-doxygen/html/
-doxygen/log.txt
