@@ -149,9 +149,10 @@ The hat includes an INA219 current sensor, which can be used to monitor the targ
 1. Use 'sudo raspi-config', and under the 'Interfacing Options' menu, enable the I2C interface.
 
 2. Install the [Pi INA219 library](https://github.com/chrisb2/pi_ina219/blob/master/README.md):
-
+```
     sudo apt install python3-pip
     pip3 install pi-ina219
+```
 
 3. Create a new file called 'sense_current.py', and copy the following into it:
 
