@@ -20,36 +20,27 @@ Features:
 
 1. Use [Rasbperry Pi Imager](https://www.raspberrypi.org/software/) to image the micro SD card with 'Raspberry Pi OS Lite'
 
-2. [Enable WiFi](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) by adding 'wpa_supplicant.conf' to the boot partition:
-```
-country=US
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-    
-network={
-    ssid="NETWORK-NAME"
-    psk="NETWORK-PASSWORD"
-}
-```
-3. [Enable ssh](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md) by adding an empty 'ssh' file to the boot partition:
-```
-touch ssh
-```
+2. Before clicking 'write', enter the secret 'advanced options' menu by holding down Ctrl+Shift+X
+3.a. Set the hostname to 'jtaghat'
+3.b. Enable SSH, and set a password for the 'pi' user
+3.c. Enable WiFi, and set the SSID and password for your WiFi netowrk. Set the Wifi country to your country.
+3.d. Set the locale settings to your current location.
+3.e. Check the option to skip the first-run wizard.
 
-4. Boot the pi, and check the router to determine the IP address, then SSH into it
+2. Boot the pi, and check the router to determine the IP address, then SSH into it
 
-5. Use 'sudo raspi-config', and under the 'Interfacing Options' menu, enable SSH at boot.
+3. Use 'sudo raspi-config', and under the 'Interfacing Options' menu, enable SSH at boot.
 
-6. Update packages and install git:
+4. Update packages and install git:
 ```
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y git autoconf libtool libusb-1.0-0-dev screen telnet
 ```
 
-7. Download and build our [patched](https://github.com/Blinkinlabs/OpenOCD/commit/de3ccf1de793416172838cf2676b77498c0fd1d7) version of OpenOCD:
+5. Download and build the master branch of OpenOCD:
 ```
-git clone https://github.com/Blinkinlabs/OpenOCD.git --branch jtag_hat openocd
+git clone https://git.code.sf.net/p/openocd/code openocd-code
 cd openocd
 
 ./bootstrap
