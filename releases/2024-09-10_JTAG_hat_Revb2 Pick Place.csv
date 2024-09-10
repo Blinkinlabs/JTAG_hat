@@ -1,0 +1,58 @@
+Altium Designer Pick and Place Locations
+C:\Users\matt\reference\JTAG_hat\pcb\Project Outputs for JTAG_hat\Pick Place\Pick Place for PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       10/09/24
+Time:       17:23
+Revision:   90e8218383d6bcf11831bbcb621799bf6c31445c
+Variant:    No variations
+Units used: mm
+
+"Designator","Value","Comment","Description","Footprint","Ref-X(mm)","Ref-Y(mm)","Layer","Rotation"
+"J5","","POWER","Header, 4-Pin","HDR1X4","9.2500","11.0400","TopLayer","270"
+"L1","","BLINKINLABS_LOGO","Square logo","BLINKINLABS_LOGO","18.7000","7.6500","TopLayer","0"
+"J4","","20-pin JTAG/SW","","HDR2X10","35.2470","51.6850","TopLayer","270"
+"J3","","UART","Header, 4-Pin","HDR1X4","35.3470","23.0350","TopLayer","270"
+"C12","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","19.5000","56.7500","TopLayer","270"
+"C11","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","16.0000","37.9000","TopLayer","90"
+"C10","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","19.4000","49.1000","TopLayer","180"
+"C9","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","19.2000","31.3000","TopLayer","180"
+"C8","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","19.2000","36.1000","TopLayer","180"
+"C7","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","19.0000","44.1000","TopLayer","180"
+"C6","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","15.7000","49.1000","TopLayer","0"
+"C5","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","15.6000","31.3000","TopLayer","0"
+"C4","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","15.6000","36.1000","TopLayer","0"
+"C3","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","15.4000","44.1000","TopLayer","0"
+"C1","0.10uF","0.10uF","CAP CER 0.1UF 16V X5R 0402","CAPC1005X06L","14.2350","52.2024","TopLayer","90"
+"R17","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","26.8000","39.9000","TopLayer","0"
+"R16","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","26.8000","36.6000","TopLayer","0"
+"R7","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","20.6000","50.6000","TopLayer","0"
+"R6","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","33.3150","TopLayer","0"
+"R5","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","34.3150","TopLayer","0"
+"R4","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","47.2150","TopLayer","0"
+"R3","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","41.3150","TopLayer","0"
+"R2","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","42.3150","TopLayer","0"
+"R1","100","100","RES SMD 100 OHM 5% 1/10W 0402","ERJ2G(0402)_L","21.9270","29.4150","TopLayer","0"
+"R14","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","10.9000","46.9000","TopLayer","0"
+"R12","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","10.6000","38.5000","TopLayer","180"
+"R13","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","10.6000","37.4000","TopLayer","180"
+"R11","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","10.9000","48.2000","TopLayer","0"
+"R9","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","26.8000","38.8000","TopLayer","0"
+"R8","10k","10k","RES SMD 10K OHM 5% 1/5W 0402","ERJ2G(0402)_L","26.8000","37.7000","TopLayer","0"
+"C2","10uF","10uF","CAP CER 10UF 10V X7R 0805","CAPC2012X10L","12.3350","52.4024","TopLayer","270"
+"R15","1k","1k","RES SMD 1K OHM 5% 1/10W 0402","ERJ2G(0402)_L","46.2500","48.2500","TopLayer","180"
+"R10","20k","20k","RES SMD 20K OHM 1% 1/10W 0402","ERJ2G(0402)_L","20.6000","51.7000","TopLayer","180"
+"U5","AP22653W6-7","AP22653W6-7","LOAD SWITCH,SOT26,T&R,3K","SOT95P280X145-6N-5","17.0350","51.7024","TopLayer","0"
+"D1","BL-HUB37A-AV-TRB","BL-HUB37A-AV-TRB","LED, 0402, Super Red, 50mcd@20mA, 627~637nm","BL-Hxx37A-AV-TRB","48.7500","48.2500","TopLayer","0"
+"R18","CS05W4F100LT5E","CS05W4F100LT5E","250mW Thick Film Resistors 500V ±1% 100mO 0805 Chip Resistor - Surface Mount ROHS","ERJ6G(0805)_N","21.0000","54.0000","TopLayer","0"
+"J2","FTSH-105-01-L-DV-K-TR","FTSH-105-01-L-DV-K-TR","1.27mm 2 10P -55?~+125? Standing paste 3.4A SMD,P=1.27mm Board-to-Board and Backplane Connector ROHS","FTSH-105-01-L-DV-K-TR","48.9270","40.3150","TopLayer","270"
+"U7","INA219AID","INA219AID","Current Monitor Regulator High-Side 10mA 8-SOIC","D0008A_N","15.0000","58.0000","TopLayer","0"
+"U6","NC7WZ14P6X","NC7WZ14P6X","Inverter IC 2 Channel Schmitt Trigger SC-88 (SC-70-6)","TSOP65P210X110-6N","13.8710","38.3000","TopLayer","0"
+"Q1","NTJD5121NT1G","NTJD5121NT1G","Mosfet Array 60V 295mA 250mW Surface Mount SC-88/SC70-6/SOT-363","FP-419B-02-MFG","24.1000","38.2000","TopLayer","270"
+"J1","SC0073","SC0073","Raspberry Pi shield Header","RaspberryPi_Connector","27.5000","32.0000","TopLayer","0"
+"U4","SN74LVC2T45DCTR","SN74LVC2T45DCTR","Voltage Level Translator Bidirectional 1 Circuit 2 Channel 420Mbps SM8","FP-DCT0008A-MFG","17.4270","33.8150","TopLayer","0"
+"U1","SN74LVC2T45DCTR","SN74LVC2T45DCTR","Voltage Level Translator Bidirectional 1 Circuit 2 Channel 420Mbps SM8","FP-DCT0008A-MFG","17.4270","28.9150","TopLayer","0"
+"U3","SN74LVC2T45DCTR","SN74LVC2T45DCTR","Voltage Level Translator Bidirectional 1 Circuit 2 Channel 420Mbps SM8","FP-DCT0008A-MFG","17.4270","46.7150","TopLayer","0"
+"U2","SN74LVC2T45DCTR","SN74LVC2T45DCTR","Voltage Level Translator Bidirectional 1 Circuit 2 Channel 420Mbps SM8","FP-DCT0008A-MFG","17.4270","41.8150","TopLayer","0"
